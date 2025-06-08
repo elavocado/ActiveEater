@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fullness Scale - Intuitive Eater Tools</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-r from-indigo-50 via-white to-indigo-50 d-flex flex-column align-items-center py-5">
+
+  <main class="bg-white rounded-5 shadow-lg p-5" style="max-width:480px; width:90vw; font-family: 'Inter', sans-serif;">
+    <h1 class="text-center fw-bold mb-5 display-6 text-indigo-900">Fullness Awareness</h1>
+
+    <form id="fullnessForm" aria-live="polite" aria-atomic="true" novalidate>
+      <p class="fw-semibold fs-5 mb-4" id="fullnessQuestion">How full do you feel right now?</p>
+      <div class="btn-group-vertical w-100" role="group" aria-labelledby="fullnessQuestion">
+        <input type="radio" class="btn-check" name="fullness" id="f-opt1" value="0" required autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt1">1 - Very empty, extremely hungry</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt2" value="1" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt2">2 - Quite empty, hungry</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt3" value="2" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt3">3 - Slightly empty, mildly hungry</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt4" value="3" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt4">4 - Neutral, neither hungry nor full</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt5" value="4" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt5">5 - Slightly full, comfortable</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt6" value="5" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt6">6 - Quite full, satisfied</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt7" value="6" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt7">7 - Very full, almost uncomfortable</label>
+
+        <input type="radio" class="btn-check" name="fullness" id="f-opt8" value="7" autocomplete="off" />
+        <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="f-opt8">8 - Uncomfortably full</label>
+      </div>
+
+      <div class="d-flex justify-content-between mt-5">
+        <button id="resetBtn" type="button" class="btn btn-indigo btn-lg rounded-pill">Reset</button>
+        <button id="submitBtn" type="submit" class="btn btn-indigo btn-lg rounded-pill">Get Advice</button>
+      </div>
+    </form>
+
+    <div id="result" class="alert alert-indigo mt-5 fs-5 fw-semibold text-center" role="alert" style="display:none;"></div>
+  </main>
+
+  <script src="fullness-scale.js"></script>
+</body>
+</html>
