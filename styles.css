@@ -1,4 +1,75 @@
-﻿:root {
+﻿/* Home page body and layout */
+.home-body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+}
+
+.home-body h1 {
+  font-weight: 700;
+  color: #374151;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-size: 2.75rem;
+}
+
+.tools-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.tool-card {
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  width: 260px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  user-select: none;
+  outline-offset: 4px;
+}
+
+.tool-card:focus-visible {
+  box-shadow: 0 0 0 0.3rem #4f46e5aa;
+  outline: none;
+}
+
+.tool-card:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.14);
+  transform: translateY(-6px);
+}
+
+.tool-icon {
+  font-size: 4.5rem;
+  color: #4f46e5;
+  margin-bottom: 1.5rem;
+}
+
+.tool-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+.tool-desc {
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+/* Existing hunger scale styles below */
+
+:root {
   --bs-indigo: #5c6ac4;
   --bs-indigo-rgb: 92,106,196;
 }
@@ -49,7 +120,7 @@
 }
 
 .btn-group-vertical .btn {
-  text-align: left; /* align text left */
+  text-align: left;
   border: 1.5px solid #5c6ac4;
   box-shadow: 0 2px 8px rgb(92 106 196 / 0.15);
   margin-bottom: 0.9rem !important;
@@ -58,6 +129,7 @@
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
   user-select: none;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .btn-group-vertical .btn:last-child {
@@ -69,5 +141,4 @@
   box-shadow: 0 4px 16px rgb(92 106 196 / 0.45);
   background-color: #5c6ac4;
   color: white;
-  border-color: #4a56b5;
 }

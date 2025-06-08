@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hunger Scale - Intuitive Eater Tools</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-r from-indigo-50 via-white to-indigo-50 d-flex flex-column align-items-center py-5">
+
+  <main class="bg-white rounded-5 shadow-lg p-5" style="max-width:480px; width:90vw; font-family: 'Inter', sans-serif;">
+    <h1 class="text-center fw-bold mb-5 display-6 text-indigo-900">Hunger Awareness</h1>
+
+    <form id="hungerForm" aria-live="polite" aria-atomic="true" novalidate>
+      <!-- Step 1 -->
+      <div class="step active" data-step="1">
+        <p class="fw-semibold fs-5 mb-4" id="q1">How does your body feel right now?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q1">
+          <input type="radio" class="btn-check" name="step1" id="s1-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s1-opt1">Very comfortable and relaxed</label>
+
+          <input type="radio" class="btn-check" name="step1" id="s1-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s1-opt2">Mostly comfortable with minor tension</label>
+
+          <input type="radio" class="btn-check" name="step1" id="s1-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s1-opt3">Neutral, no strong feeling either way</label>
+
+          <input type="radio" class="btn-check" name="step1" id="s1-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s1-opt4">Slightly uncomfortable or restless</label>
+
+          <input type="radio" class="btn-check" name="step1" id="s1-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s1-opt5">Quite tense, uncomfortable, or uneasy</label>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step" data-step="2">
+        <p class="fw-semibold fs-5 mb-4" id="q2">How is your mood right now?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q2">
+          <input type="radio" class="btn-check" name="step2" id="s2-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt1">Very calm and happy</label>
+
+          <input type="radio" class="btn-check" name="step2" id="s2-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt2">Mostly calm, a little distracted</label>
+
+          <input type="radio" class="btn-check" name="step2" id="s2-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt3">Neutral mood</label>
+
+          <input type="radio" class="btn-check" name="step2" id="s2-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt4">A bit irritable or short-tempered</label>
+
+          <input type="radio" class="btn-check" name="step2" id="s2-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt5">Easily annoyed, cranky, or snappy</label>
+
+          <input type="radio" class="btn-check" name="step2" id="s2-opt6" value="5" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s2-opt6">Struggling to keep a positive mood</label>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step" data-step="3">
+        <p class="fw-semibold fs-5 mb-4" id="q3">How is your energy level?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q3">
+          <input type="radio" class="btn-check" name="step3" id="s3-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt1">Fully alert and energized</label>
+
+          <input type="radio" class="btn-check" name="step3" id="s3-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt2">Mostly alert, slight tiredness</label>
+
+          <input type="radio" class="btn-check" name="step3" id="s3-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt3">Neutral, neither tired nor energetic</label>
+
+          <input type="radio" class="btn-check" name="step3" id="s3-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt4">Somewhat tired or sluggish</label>
+
+          <input type="radio" class="btn-check" name="step3" id="s3-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt5">Very tired, heavy, or “blah” feeling</label>
+
+          <input type="radio" class="btn-check" name="step3" id="s3-opt6" value="5" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s3-opt6">Extremely fatigued or drained</label>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step" data-step="4">
+        <p class="fw-semibold fs-5 mb-4" id="q4">What sensations do you feel in your head?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q4">
+          <input type="radio" class="btn-check" name="step4" id="s4-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt1">No unusual feelings</label>
+
+          <input type="radio" class="btn-check" name="step4" id="s4-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt2">Mild tension or pressure</label>
+
+          <input type="radio" class="btn-check" name="step4" id="s4-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt3">Slight headache or dull ache</label>
+
+          <input type="radio" class="btn-check" name="step4" id="s4-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt4">Light-headed or dizzy sometimes</label>
+
+          <input type="radio" class="btn-check" name="step4" id="s4-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt5">Trouble concentrating or zoning out</label>
+
+          <input type="radio" class="btn-check" name="step4" id="s4-opt6" value="5" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s4-opt6">Feeling faint or woozy</label>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step" data-step="5">
+        <p class="fw-semibold fs-5 mb-4" id="q5">How does your stomach feel?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q5">
+          <input type="radio" class="btn-check" name="step5" id="s5-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt1">Comfortable and neutral</label>
+
+          <input type="radio" class="btn-check" name="step5" id="s5-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt2">Mild emptiness, slight awareness</label>
+
+          <input type="radio" class="btn-check" name="step5" id="s5-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt3">Occasional mild gurgling or hunger pangs</label>
+
+          <input type="radio" class="btn-check" name="step5" id="s5-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt4">Strong gurgling or gnawing sensation</label>
+
+          <input type="radio" class="btn-check" name="step5" id="s5-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt5">Uncomfortable pangs or cramps</label>
+
+          <input type="radio" class="btn-check" name="step5" id="s5-opt6" value="5" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s5-opt6">Painful or sharp hunger sensations</label>
+        </div>
+      </div>
+
+      <!-- Step 6 -->
+      <div class="step" data-step="6">
+        <p class="fw-semibold fs-5 mb-4" id="q6">Are there other physical signs?</p>
+        <div class="btn-group-vertical w-100" role="group" aria-labelledby="q6">
+          <input type="radio" class="btn-check" name="step6" id="s6-opt1" value="0" required autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s6-opt1">No other signs</label>
+
+          <input type="radio" class="btn-check" name="step6" id="s6-opt2" value="1" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s6-opt2">Slight salivation or mouth watering</label>
+
+          <input type="radio" class="btn-check" name="step6" id="s6-opt3" value="2" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s6-opt3">Feeling a bit shaky or trembling</label>
+
+          <input type="radio" class="btn-check" name="step6" id="s6-opt4" value="3" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s6-opt4">Weakness or trembling all over</label>
+
+          <input type="radio" class="btn-check" name="step6" id="s6-opt5" value="4" autocomplete="off" />
+          <label class="btn btn-outline-indigo rounded-4 py-3 fs-5" for="s6-opt5">Sweaty or trembling strongly</label>
+        </div>
+      </div>
+    </form>
+
+    <div class="d-flex justify-content-between mt-5">
+      <button id="prevBtn" class="btn btn-indigo btn-lg rounded-pill" disabled>Previous</button>
+      <button id="nextBtn" class="btn btn-indigo btn-lg rounded-pill">Next</button>
+    </div>
+
+    <div id="result" class="alert alert-indigo mt-5 fs-5 fw-semibold text-center" role="alert" style="display:none;"></div>
+  </main>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

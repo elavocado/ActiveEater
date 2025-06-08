@@ -38,23 +38,27 @@ nextBtn.addEventListener('click', () => {
   }
   if (currentStep === steps.length - 1) {
     let totalScore = 0;
+    const maxRawScore = 29; // Correct max total score for your steps
     steps.forEach(step => {
       const checked = step.querySelector('input[type="radio"]:checked');
       totalScore += parseInt(checked.value, 10);
     });
 
+    // Normalize totalScore to a 1-10 scale:
+    let hungerScore = Math.round((totalScore / maxRawScore) * 9) + 1;
+
     let advice = '';
-    if (totalScore >= 8) {
+    if (hungerScore >= 8) {
       advice = "You are very hungry. It's best to eat a full meal now.";
-    } else if (totalScore >= 5) {
+    } else if (hungerScore >= 5) {
       advice = "You feel somewhat hungry. Having a healthy snack or small meal is recommended.";
-    } else if (totalScore >= 2) {
+    } else if (hungerScore >= 3) {
       advice = "You might need a light snack or drink to stay comfortable.";
     } else {
       advice = "You are not hungry right now. No need to eat or snack.";
     }
 
-    resultDiv.textContent = `Your Hunger Score: ${totalScore} — ${advice}`;
+    resultDiv.textContent = `Your Hunger Score: ${hungerScore} — ${advice}`;
     resultDiv.style.display = 'block';
     nextBtn.disabled = true;
   } else {
